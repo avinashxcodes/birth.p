@@ -684,6 +684,16 @@
     <audio id="birthday-audio" loop>
         <source src="/Tum Se Hi.mp3" type="audio/mpeg">
     </audio>
+    <audio id="bgMusic" src="Tum Se Hi.mp3" loop></audio>
+
+<script>
+document.addEventListener("click", function () {
+  var audio = document.getElementById("bgMusic");
+  if (audio && audio.paused) {
+    audio.play().catch(function(){});
+  }
+}, { once: true });
+</script>
 
     <script>
         // --- Navigation Logic ---
